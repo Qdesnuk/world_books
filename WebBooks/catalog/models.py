@@ -34,7 +34,7 @@ class Author(models.Model):
         verbose_name='Дата рождения',
         null=True,
         blank=True)
-    date_of_birth = models.DateField(
+    date_of_death = models.DateField(
         help_text='Введите дату смерти',
         verbose_name='Дата смерти',
         null=True,
