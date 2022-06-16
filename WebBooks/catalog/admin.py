@@ -28,3 +28,11 @@ class BookAdmin(admin.ModelAdmin):
 @admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
     list_filter = ('book', 'status')
+    fieldsets = (
+        ('Экземпляр книги', {
+            'fields': ('book', 'imprint', 'inv_num')
+        }),
+        ('Статус и окончание его действия', {
+            'fields': ('status', 'due_back')
+        })
+    )
