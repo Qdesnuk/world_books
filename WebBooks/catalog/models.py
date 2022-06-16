@@ -97,7 +97,7 @@ class Status(models.Model):
 
 
 class BookInstance(models.Model):
-    book = models.ForeignKey('Book', on_delete=models.CASCADE, null=True)
+    book = models.ForeignKey('Book', on_delete=models.CASCADE, null=True, verbose_name='Книги')
     inv_num = models.CharField(
         max_length=20,
         null=True,
