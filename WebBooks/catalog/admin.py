@@ -12,7 +12,7 @@ admin.site.register(Status)
 
 
 class AuthorAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
 
 
 admin.site.register(Author, AuthorAdmin)
@@ -20,7 +20,7 @@ admin.site.register(Author, AuthorAdmin)
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'genre', 'language', 'display_author')
 
 
 @admin.register(BookInstance)
